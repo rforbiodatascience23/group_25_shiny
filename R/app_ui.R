@@ -12,8 +12,8 @@ app_ui <- function(request) {
     fluidPage(
       h1("centraldogma"),
       tabsetPanel(
-        tabPanel(title = "panel1",
-          "module1"),
+        tabPanel(title = "Transcription",
+          mod_from_dna_to_pep_ui("from_dna_to_pep_1")),
         tabPanel(title = "Plotting",
           mod_plot_mod_ui("plot_mod_1"))
       )

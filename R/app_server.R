@@ -8,6 +8,7 @@
 #' @noRd
 app_server <- function(input, output, session) {
   mod_plot_mod_server("plot_mod_1")
+  mod_from_dna_to_pep_server("from_dna_to_pep_1")
   output$abundance <- renderPlot({
     if(input$peptide == ""){
       NULL
