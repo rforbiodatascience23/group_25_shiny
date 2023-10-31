@@ -5,8 +5,10 @@
 #' @import shiny
 #' @noRd
 app_server <- function(input, output, session) {
-  # Your application server logic
+  mod_plot_mod_server("plot_mod_1")
 }
+
+
 
 # Copy in the following code in the module script when creating a new module
 '''
