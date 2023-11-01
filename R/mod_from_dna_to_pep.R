@@ -11,7 +11,7 @@ mod_from_dna_to_pep_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
-      column(8, "DNA_sequence"),
+      column(8, uiOutput(ns("DNA"))),
       column(4, "random_dna_length", "generate_dna_button")
     ),
     "peptide_sequence"
