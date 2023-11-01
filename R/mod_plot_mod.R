@@ -30,15 +30,21 @@ mod_plot_mod_ui <- function(id){
   )
 }
 
+
 #' plot_mod Server Functions
 #'
 #' @noRd
 mod_plot_mod_server <- function(id){
-  moduleServer( id, function(input, output, session){
+  moduleServer(id, function(input, output, session){
     ns <- session$ns
+
+    output$abundance <- renderPlot({
+      plot_character_frequency(input$peptide)
+    })
 
   })
 }
+
 
 ## To be copied in the UI
 # mod_plot_mod_ui("plot_mod_1")
