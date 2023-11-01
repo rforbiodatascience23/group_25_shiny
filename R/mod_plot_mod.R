@@ -39,7 +39,7 @@ mod_plot_mod_server <- function(id){
     ns <- session$ns
 
     output$abundance <- renderPlot({
-      plot_character_frequency(input$peptide)
+      centraldogma::plot_character_frequency(input$peptide)
     })
 
   })
