@@ -38,10 +38,17 @@ mod_plot_mod_server <- function(id){
   moduleServer(id, function(input, output, session){
     ns <- session$ns
 
-    output$abundance <- renderPlot({
-      centraldogma::plot_character_frequency(input$peptide)
-    })
+    # Detach and reload the package
+    detach("package:centraldogma", unload=TRUE)
+    library(centraldogma)
 
+    output$abundance <- renderPlot({
+      if ("plot_character_frequency" %in% ls("package:centraldogma")) {
+        centraldogma::plot_character_frequency(input$peptide)
+      } else {
+        print("Function 'plot_character_frequency' not found in centraldogma package")
+      }
+    })
   })
 }
 
