@@ -1,52 +1,24 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# centraldogma
-
-<!-- badges: start -->
-<!-- badges: end -->
-
-The goal of centraldogma is to …
+# Group 25 Shiny App
+This Shiny application is developed as part of the R for Bio-Data Science 13 week 5ECTs course at DTU (Technical University of Denmark). It serves as an interactive tool to visualize and analyze data, using the functions provided in 'group_25_package'.
 
 ## Installation
+To run the Shiny app locally, install the 'group_25_package' first. Please follow the instructions in the [package repository](https://github.com/rforbiodatascience23/group_25_package).
 
-You can install the development version of centraldogma from
-[GitHub](https://github.com/) with:
+## Usage
+After installing the package, run the Shiny app using these commands in R:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("rforbiodatascience23/group_25_shiny")
-```
-
-## Example
-
-This is a basic example which shows you how to solve a common problem:
-
-``` r
+```R
 library(centraldogma)
-## basic example code
+run_app()
 ```
+## Features
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+- Interactive data visualisation
+- Data analysis using 'group_25_package'
+- Interface for bioinformatics data analysis and visualisation.
 
-``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
-```
+## References
+This app was created following the guidelines of the [DTU course on computational data analysis](https://courses.compute.dtu.dk/02807/2023/).
 
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.svg" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
