@@ -7,7 +7,7 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_from_dna_to_pep <- function(id){
+mod_from_dna_to_pep_ui <- function(id){
   ns <- NS(id)
   tagList(
     fluidRow(
